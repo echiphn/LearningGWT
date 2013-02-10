@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Note, this file is for user/machine settings, must be set for your machine and placed in ~/.m2 -->
+<settings>
+    <profiles>        
+        <profile>
+            <id>gwt-1.4.60</id>
+            <properties>
+                <google.webtoolkit.home>[GWT_PATH]/gwt-mac-1.4.60</google.webtoolkit.home>
+                <!-- you only need XstartOnFirstThread on a mac -->
+                <google.webtoolkit.extrajvmargs>-Xmx256m -Xms256m -XstartOnFirstThread -Dgwt.coverage.enable=true</google.webtoolkit.extrajvmargs>
+                <java.library.path>${google.webtoolkit.home}</java.library.path>
+            </properties>
+        </profile>
+    </profiles>
+    <activeProfiles>
+        <activeProfile>gwt-1.4.60</activeProfile>
+    </activeProfiles>
+</settings>
+

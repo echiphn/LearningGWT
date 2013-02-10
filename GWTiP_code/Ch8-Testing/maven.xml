@@ -1,0 +1,13 @@
+<project xmlns:j="jelly:core" xmlns:ant="jelly:ant">
+	<property environment="env" />
+
+	<preGoal name="clean:clean">
+		<ant:delete file="${basedir}/coverage.ec" />
+		<ant:delete file="${basedir}/coverage.em" />
+	</preGoal>
+
+	<postGoal name="test:test">
+		<attainGoal name="emma:report" />
+	</postGoal>
+
+</project>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<inherits name='com.google.gwt.user.User'/>
+	<inherits name="com.google.gwt.i18n.I18N"/>
+    <inherits name='com.googlecode.gwtx.Java'/>
+	<entry-point class='com.manning.gwtip.bookstore.client.BookstoreEntryPoint'/>
+    <stylesheet src="bookstore.css" />
+    <script src="reflection.js">
+            if( $wnd.Reflection ){
+                return true;
+            } else {
+                return false;
+            }
+    </script>
+    <servlet path="/BookstoreService" class="com.manning.gwtip.bookstore.server.BookstoreServiceServlet" />
+    <servlet path="/CoverUpload" class="com.manning.gwtip.bookstore.server.FileUploadServlet" />
+</module>

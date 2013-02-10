@@ -1,0 +1,13 @@
+<project xmlns:j="jelly:core" xmlns:ant="jelly:ant">
+	<property environment="env" />
+	
+	<preGoal name="gwt">
+	      <!-- copy the Spring applicationContext file into the GWT embdedded Tomcat webapps location
+	      for Hosted mode only -->
+	      <ant:copy file="${maven.war.src}/WEB-INF/applicationContext.xml"
+	            tofile="${basedir}/target/tomcat/webapps/ROOT/WEB-INF/applicationContext.xml" />
+	   </preGoal> 
+	
+</project>
+
+

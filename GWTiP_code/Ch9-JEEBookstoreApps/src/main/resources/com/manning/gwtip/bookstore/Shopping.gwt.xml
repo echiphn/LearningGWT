@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<inherits name='com.google.gwt.user.User'/>
+	<inherits name="com.google.gwt.i18n.I18N"/>
+    <inherits name='com.googlecode.gwtx.Java'/>
+	<entry-point class='com.manning.gwtip.bookstore.client.ShoppingEntryPoint'/>
+    <stylesheet src="bookstore.css" />
+    <servlet path="/CustomerService" class="com.manning.gwtip.bookstore.server.CustomerServiceServlet" />
+</module>

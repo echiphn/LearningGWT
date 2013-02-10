@@ -1,0 +1,14 @@
+Manning GWT In Practice Ch5 gwtipXfire project
+-------------------------------------------------------------
+
+This project contains the code for the SOAP server used in Chapter 5. It is 
+packaged as a NetBeans project, which you can open using 5.5.x or 6.x. 
+
+When you first open the project, you will get a notification that there are 
+reference problems. You need to right-click on the project icon in NetBeans and
+select "Resolve Reference Problems." The JARs you need are in the ./lib folder 
+of the project.
+
+You will need this project deployed to your NetBeans Tomcat instance for the
+examples in the Chapter 5 Examples project to run.
+

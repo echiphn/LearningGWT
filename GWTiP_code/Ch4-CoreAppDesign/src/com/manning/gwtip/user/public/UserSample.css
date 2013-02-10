@@ -1,0 +1,50 @@
+body { 
+	background-color: white;
+	color: black;
+	font-family: Arial, sans-serif;
+	font-size: small;
+	margin: 8px;
+	margin-top: 3px;
+}
+
+
+
+.user-AddressEdit {
+    width: 600px;
+}
+
+
+.gwt-FlowPanel {
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+}
+
+a {	
+	color: darkblue;
+}
+
+a:visited {	
+	color: darkblue; 
+}
+
+.
+.gwt-StackPanel {
+	background-color: white;
+	border: 1px solid #AAAAAA;
+	width: 600px;
+        height: 400px;
+        
+}
+
+.gwt-StackPanel .gwt-StackPanelItem {
+	background-image: url(gray_gradient.gif);
+	background-repeat: repeat-x;
+	background-color: #EEEEEE;
+	cursor: pointer;
+	cursor: hand;
+        width: 600px;
+}
+
+.gwt-StackPanel .gwt-StackPanelItem-selected {
+}

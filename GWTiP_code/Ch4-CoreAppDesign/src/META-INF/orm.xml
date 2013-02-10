@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm
+                 http://java.sun.com/xml/ns/persistence/orm_1_0.xsd"
+                 xmlns="http://java.sun.com/xml/ns/persistence/orm" version="1.0">
+    
+    <package>com.manning.gwtip.user.client</package>
+    
+    <entity class="User" metadata-complete="true" access="PROPERTY">
+        <table name="USER"/>
+        <named-query name="User.findUserByUsernameAndPassword">
+            <query>select u from User u 
+                where  u.username = :username 
+            and u.password = :password</query>
+        </named-query>
+        <attributes>
+            <id name="username" />
+            <one-to-one name="shippingAddress" >
+                <cascade>
+                    <cascade-all />
+                </cascade>
+            </one-to-one>
+            <one-to-one name="billingAddress" >
+                <cascade>
+                    <cascade-all />
+                </cascade>
+            </one-to-one>
+        </attributes>
+    </entity>
+    <entity class="Address" metadata-complete="true" access="PROPERTY">
+        <table name="ADDRESS"/>  
+        <attributes>
+            <id name="id">
+                <generated-value strategy="IDENTITY"/>
+            </id>
+        </attributes>
+    </entity>
+</entity-mappings>

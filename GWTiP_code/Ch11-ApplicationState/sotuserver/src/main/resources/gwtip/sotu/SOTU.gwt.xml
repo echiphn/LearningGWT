@@ -1,0 +1,14 @@
+<module>
+	<!-- Inherit the core Web Toolkit stuff.                  -->
+	<inherits name='com.google.gwt.user.User'/>
+        <!-- Inherit the internationalization stuff.            
+        <inherits name="com.google.gwt.i18n.I18N" />  -->
+	<!-- Specify the app entry point class.                   -->
+        <inherits name ="com.google.gwt.xml.XML"/> 
+	<entry-point class='gwtip.sotu.client.EntryPoint'/>
+        <!-- Load the servlet for the GWTShell -->
+        <servlet path="/cometStream" 
+            class="gwtip.sotu.server.StreamServlet"/>
+        <servlet path="/conversationService" 
+            class="gwtip.sotu.server.ConversationServiceServlet"/>
+</module>

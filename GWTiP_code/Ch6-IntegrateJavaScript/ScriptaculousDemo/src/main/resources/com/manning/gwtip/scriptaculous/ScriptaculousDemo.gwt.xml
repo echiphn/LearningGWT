@@ -1,0 +1,8 @@
+<module>
+	<!-- Inherit the core Web Toolkit stuff.  -->
+	<inherits name='com.google.gwt.user.User'/>
+	<!--  Inherit GWTiP Scriptaculous GWT Module -->
+    <inherits name='com.manning.gwtip.javascript.scriptaculous.Scriptaculous'/>
+	<!-- Specify the app entry point class. -->
+	<entry-point class='com.manning.gwtip.scriptaculous.client.MyEntryPoint'/>
+</module>

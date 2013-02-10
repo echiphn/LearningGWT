@@ -1,0 +1,8 @@
+<module>
+	<!-- Inherit the core Web Toolkit stuff.  -->
+	<inherits name='com.google.gwt.user.User'/>
+	<!--  Inherit the GWTiP MooFX GWT stuff -->
+    <inherits name='com.manning.gwtip.javascript.moofx.MooFx'/>
+	<!-- Specify the app entry point class. -->
+	<entry-point class='com.manning.gwtip.moofx.client.MyEntryPoint'/>
+</module>

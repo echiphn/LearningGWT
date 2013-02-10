@@ -1,0 +1,5 @@
+<project xmlns:j="jelly:core" xmlns:ant="jelly:ant">
+	<property environment="env" />
+</project>
+
+

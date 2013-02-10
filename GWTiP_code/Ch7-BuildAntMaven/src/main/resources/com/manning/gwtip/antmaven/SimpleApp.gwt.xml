@@ -1,0 +1,12 @@
+<module>
+
+	<!-- Inherit the core Web Toolkit stuff.                  -->
+	<inherits name='com.google.gwt.user.User'/>
+
+	<!-- Specify the app entry point class.                   -->
+	<entry-point class='com.manning.gwtip.antmaven.client.SimpleApp'/>
+  
+    <servlet path="/MyService"
+           class="com.manning.gwtip.antmaven.server.MyServiceImpl"/>        
+  
+</module>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Context path=""> 
+
+<!--  Use this realm with "noserver," or when deployed, the shell does not support this. -->
+<!-- 
+<Realm className="org.apache.catalina.realm.JNDIRealm"
+    debug="99"
+    connectionName="uid=admin,ou=system"
+    connectionPassword="secret"
+    connectionURL="ldap://localhost:389"
+    roleBase="ou=roles,dc=manning,dc=com"
+    roleName="cn"
+    roleSearch="(uniqueMember={0})"
+    roleSubtree="false"
+    userSearch="(uid={0})"
+    userPassword="userPassword"
+    userPattern="uid={0},ou=users,dc=manning,dc=com"
+/>
+-->
+</Context>

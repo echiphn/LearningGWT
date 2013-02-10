@@ -1,0 +1,11 @@
+GWT-Maven Usage with GWT and Emma
+
+ This is an example project from GWT in Practice that uses the GWT-Maven
+ plugin for Maven 2, to demonstrate testing concepts.
+
+* Overview
+
+ * GwtTestMe includes several GwtTestCase based JUnit tests that exercise client side translatable classes, and GWT-RPC.
+In addition, code coverage is demonstrated using a patched version of GWT and Emma. 
+
+ 

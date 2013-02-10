@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+	<pomVersion>3</pomVersion>
+	<artifactId>gwt-moo.fx</artifactId>
+	<groupId>com.manning.gwtip</groupId>
+	<id>javascript.moofx</id>
+	<currentVersion>1.0.0</currentVersion>
+	<name>Moo.fx for GWT</name>
+	<package>com.manning.gwtip.javascript.moofx</package>
+	<inceptionYear>2006</inceptionYear>		
+	<build>
+		<sourceDirectory>src/main/java</sourceDirectory>
+		<resources>
+			<!--  include java source for GWT module distribution -->
+			<resource>
+				<directory>${basedir}/src/main/java</directory>
+			</resource>
+			<resource>
+				<directory>${basedir}/src/main/resources</directory>
+			</resource>
+		</resources>		
+	</build>		
+	<dependencies>
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-user</artifactId>
+			<version>1.4.60</version>
+			<type>jar</type>
+		</dependency>		
+	</dependencies>
+</project>
+

@@ -1,0 +1,6 @@
+<module>
+
+ 	<!-- a minimal module, useful only for some specific testing, you can make modules just for this -->
+	<inherits name='com.google.gwt.user.User'/>	   
+  
+</module>

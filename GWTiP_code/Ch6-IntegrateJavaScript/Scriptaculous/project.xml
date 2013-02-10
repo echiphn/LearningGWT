@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+	<pomVersion>3</pomVersion>
+	<artifactId>gwt-scriptaculous</artifactId>
+	<groupId>com.manning.gwtip</groupId>
+	<id>javascript.scriptaculous</id>
+	<currentVersion>1.0.0</currentVersion>
+	<name>Script.aculo.us for GWT</name>
+	<package>com.manning.gwtip.javascript.scriptaculous</package>
+	<inceptionYear>2006</inceptionYear>		
+	<build>
+		<sourceDirectory>src/main/java</sourceDirectory>
+		<resources>
+			<!--  include java source for GWT module distribution -->
+			<resource>
+				<directory>${basedir}/src/main/java</directory>
+			</resource>
+			<resource>
+				<directory>${basedir}/src/main/resources</directory>
+			</resource>
+		</resources>
+		<unitTestSourceDirectory>src/test/java</unitTestSourceDirectory>
+		<unitTest>
+			<includes>
+				<include>**/*GwtTest.java</include>
+			</includes>
+			<resources>
+				<resource>
+					<directory>${basedir}/src/main/webapp</directory>
+				</resource>
+				<resource>
+					<directory>${basedir}/src/main/java</directory>
+				</resource>
+				<resource>
+					<directory>${basedir}/src/test/java</directory>
+				</resource>
+			</resources>
+		</unitTest>
+	</build>		
+	<dependencies>
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-user</artifactId>
+			<version>1.4.60</version>
+			<type>jar</type>
+		</dependency>		
+	</dependencies>
+</project>
+

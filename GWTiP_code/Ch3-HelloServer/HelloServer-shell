@@ -1,0 +1,13 @@
+#!/bin/sh
+# MAC shell invoker
+
+ENTRY_POINT=com.manning.gwtip.helloserver.HelloServer
+HOST_PAGE=HelloServer.html
+
+APPDIR=`dirname $0`;
+CLASSPATH=$APPDIR/src
+CLASSPATH=$CLASSPATH:$APPDIR/bin
+CLASSPATH=$CLASSPATH:$GWT_HOME/gwt-user.jar
+CLASSPATH=$CLASSPATH:$GWT_HOME/gwt-dev-mac.jar
+
+java -XstartOnFirstThread -cp $CLASSPATH com.google.gwt.dev.GWTShell -out "$APPDIR/www" -logLevel DEBUG "$@" $ENTRY_POINT/$HOST_PAGE

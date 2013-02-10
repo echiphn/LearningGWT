@@ -1,0 +1,11 @@
+<module>
+
+	<inherits name="com.googlecode.gwtx.Java"/>
+	<inherits name='com.google.gwt.user.User'/>	
+
+	<entry-point class='com.manning.gwtip.testme.client.TestMe'/>
+  
+    <servlet path="/MyService"
+           class="com.manning.gwtip.testme.server.MyServiceServlet"/>        
+  
+</module>

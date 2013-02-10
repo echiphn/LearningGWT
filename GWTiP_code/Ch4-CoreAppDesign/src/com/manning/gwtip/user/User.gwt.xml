@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<module>
+	<!-- Inherit the core Web Toolkit stuff.                  -->
+	<inherits name='com.google.gwt.user.User'/>
+        <!-- Inherit the java.beans.* classes from GWTx           -->
+        <inherits name='com.googlecode.gwtx.Java'/>
+	<!-- Specify the app entry point class.                   -->
+	<entry-point class='com.manning.gwtip.user.client.UserEntryPoint'/>
+        <stylesheet src="UserSample.css" />
+        <!-- Load the servlet for the GWTShell -->
+        <servlet path="/UserService" class="com.manning.gwtip.user.server.UserServiceServlet" />
+</module>
+

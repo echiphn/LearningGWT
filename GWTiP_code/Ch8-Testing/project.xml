@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+	<pomVersion>3</pomVersion>
+	<artifactId>testme</artifactId>
+	<groupId>com.manning.gwtip</groupId>
+	<id>com.manning.gwtip.testme</id>
+	<currentVersion>1.0.0</currentVersion>
+	<name>TestMe</name>
+	<package>com.manning.gwtip.testme</package>
+	<build>
+		<sourceDirectory>src/main/java</sourceDirectory>
+		<resources>
+			<resource>
+				<directory>${basedir}/src/main/resources</directory>
+			</resource>
+		</resources>
+		<unitTestSourceDirectory>src/test/java</unitTestSourceDirectory>
+		<unitTest>
+			<includes>
+				<include>**/GwtTest*</include>
+			</includes>
+			<resources>
+				<resource>
+					<directory>${basedir}/src/main/webapp</directory>
+				</resource>
+				<resource>
+					<directory>${basedir}/src/main/java</directory>
+				</resource>
+				<resource>
+					<directory>${basedir}/src/test/java</directory>
+				</resource>
+			</resources>
+		</unitTest>
+	</build>
+	<dependencies>
+		
+		<!--  war bundle -->
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-servlet</artifactId>
+			<version>1.4.60</version>
+			<type>jar</type>
+			<properties>
+				<war.bundle>true</war.bundle>
+			</properties>
+		</dependency>
+		
+		<!--  gwtx needs to be before gwt.user (in certain cases, see GWTx docs) -->
+		<dependency>
+			<groupId>com.googlecode.gwtx</groupId>
+			<artifactId>GWTx</artifactId>
+			<version>20070605</version>
+			<type>jar</type>
+		</dependency>
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-user</artifactId>
+			<version>1.4.60</version>
+			<type>jar</type>
+		</dependency>			
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.1</version>
+			<type>jar</type>
+		</dependency>
+		<dependency>
+			<groupId>emma</groupId>
+			<artifactId>emma</artifactId>
+			<version>2.0.5312</version>
+			<type>jar</type>
+		</dependency> 
+		
+		<!--  coverage patch (works for gwt 1.4.60 also) -->
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwtcoverage</artifactId>
+			<version>1.4.61</version>
+		</dependency>
+		
+		<!-- 
+			gwt-dev-platform notes:
+			1. Overridden in project.properties to ${google.webtoolkit.home}/gwt-dev-${platform}.jar
+			2. build.properties defines google.webtoolkit.home and platform (project version should be overriden in ~/build.properties
+			3. Only needed for projects that have GWTTestCase based tests, required then for "dev" to be in maven test plugin classpath.
+		-->
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-dev-platform</artifactId>
+		</dependency>
+
+		<!--  plugins included as type plugin so they are auto downloaded -->
+		<dependency>
+			<groupId>com.totsp.gwt</groupId>
+			<artifactId>maven-googlewebtoolkit-plugin</artifactId>
+			<version>1.5.6</version>
+			<type>plugin</type>
+		</dependency>
+		<dependency>
+			<groupId>emma</groupId>
+			<artifactId>maven-emma-plugin</artifactId>
+			<version>0.5</version>
+			<type>plugin</type>
+		</dependency>		
+	</dependencies>
+	
+</project>
+

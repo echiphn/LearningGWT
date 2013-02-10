@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+  <bean id="AuthorDAO" class="com.manning.gwtip.bookstore.model.dao.AuthorDAO"/>
+  <bean id="BookDAO" class="com.manning.gwtip.bookstore.model.dao.BookDAO"/>
+  <bean id="CategoryDAO" class="com.manning.gwtip.bookstore.model.dao.CategoryDAO"/>
+  <bean id="BookstoreService" class="com.manning.gwtip.bookstore.service.BookstoreServiceImpl">
+     <constructor-arg>
+       <ref bean="AuthorDAO" />
+     </constructor-arg>
+     <constructor-arg>
+       <ref bean="BookDAO" />
+     </constructor-arg>
+     <constructor-arg>
+       <ref bean="CategoryDAO" />
+     </constructor-arg>
+   </bean>
+  
+</beans>

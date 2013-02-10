@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<project name="com.manning.gwtip.antmaven.SimpleApp" default="compile" basedir=".">
+	<description>GWT Ant Build File Example</description>
+
+	<!-- per project properties (also requires GWT_HOME environment variable set) -->	
+	<property name="project.dir" value="." />
+	<property name="gwt.module" value="com.manning.gwtip.antmaven.SimpleApp" />
+	<property name="source.path" value="src/main/java" />
+	<property name="test.path" value="src/main/test" />
+	<property name="resource.path" value="src/main/resources" />
+	<property name="webapp.path" value="src/main/webapp" />
+	
+	<!-- ant properties -->
+	<property environment="env" />
+	<property name="build" location="build" />
+	<property name="dist" location="dist" />
+
+	<!-- init - create needed dirs -->
+	<target name="init">
+		<tstamp />
+		<mkdir dir="${build}" />
+		<mkdir dir="${build}/bin" />
+		<mkdir dir="${build}/www" />
+		<mkdir dir="${dist}" />
+		<mkdir dir="${dist}/WEB-INF/classes" />
+		<mkdir dir="${dist}/WEB-INF/lib" />
+	</target>
+
+	<!-- set classpath (requires env.GWT_HOME) -->
+	<path id="project.class.path">
+		<pathelement path="${java.class.path}/" />
+		<pathelement path="${env.GWT_HOME}/gwt-user.jar" />
+	</path>
+
+	<!-- gwt classpath for GWTCompiler (NOTE - must include source) -->
+	<path id="gwt.classpath">
+		<pathelement location="${project.dir}/${source.path}" />
+		<pathelement location="${project.dir}/${test.path}" />
+		<pathelement location="${project.dir}/${resource.path}" />
+		<pathelement location="${env.GWT_HOME}/gwt-user.jar" />
+		<pathelement location="${env.GWT_HOME}/gwt-dev-mac.jar" />
+		<pathelement location="${env.GWT_HOME}/gwt-dev-windows.jar" />
+		<pathelement location="${env.GWT_HOME}/gwt-dev-linux.jar" />
+	</path>
+
+	<!-- copy server classes (output of javac compile) -->
+	<target name="copyserver" depends="init, compile" description="Copy javac output to dist/WEB-INF/classes">
+		<copy todir="${dist}/WEB-INF/classes">
+			<fileset dir="${build}/bin" />
+		</copy>
+	</target>
+
+	<!-- copy GWT client files (JavaScript/HTML - output of gwtcompile) -->
+	<target name="copyclient" depends="init, gwtcompile" description="Copy GWT generated files to root of dist">
+		<copy todir="${dist}">
+			<fileset dir="${build}/www/${gwt.module}/" />
+		</copy>
+	</target>
+
+	<!-- copy lib (the gwt-servlet.jar at a minimum) -->
+	<target name="copylib" depends="init" description="Copy required libs to dist/WEB-INF/lib">
+		<copy todir="${dist}/WEB-INF/lib">
+			<fileset dir="${env.GWT_HOME}">
+				<include name="gwt-servlet.jar" />
+			</fileset>
+		</copy>
+	</target>
+
+	<!-- copy web (must have a SOURCE ${webapp.path}/WEB-INF/web.xml at a minimum) -->
+	<target name="copyweb" depends="init" description="Copy source webapp contents to dist">
+		<copy todir="${dist}">
+			<fileset dir="${webapp.path}" />
+		</copy>
+	</target>
+
+	<!-- distwar -->
+	<target name="distwar" depends="init, copyserver, copyclient, copylib, copyweb" description="Perform steps to create dist directory for war">
+	</target>
+
+	<!-- compile GWT -->
+	<target name="gwtcompile" description="Invoke the GWTCompiler against GWT Java source files">
+		<echo>env.GWT_HOME=${env.GWT_HOME}</echo>
+		<java classname="com.google.gwt.dev.GWTCompiler" fork="true">
+			<arg line="-out ${build}/www" />
+			<arg value="${gwt.module}" />
+			<classpath refid="gwt.classpath" />
+		</java>
+	</target>
+
+	<!-- compile standard -->
+	<target name="compile" depends="init" description="Compile src and test to build/bin">
+		<javac srcdir="${source.path}:${test.path}" destdir="${build}/bin" includes="**" debug="on" debuglevel="lines,vars,source" source="1.4">
+			<classpath refid="project.class.path" />
+		</javac>
+	</target>
+
+	<!-- create war -->
+	<target name="war" depends="distwar" description="Package up the dist directory as a war - using module name">
+		<jar destfile="${gwt.module}.war" basedir="${dist}" />
+	</target>
+
+	<!-- create Module jar (includes source and compiled classes) -->
+	<target name="jar" depends="init, compile" description="Package up the project as a jar - for use as distributed module">
+		<jar destfile="${gwt.module}.jar">
+			<fileset dir="${build}/bin">
+				<include name="**/*.class" />
+			</fileset>
+			<fileset dir="${source.path}">
+				<include name="**" />
+			</fileset>
+			<fileset dir="${test.path}">
+				<include name="**" />
+			</fileset>
+		</jar>
+	</target>
+
+	<!-- clean -->
+	<target name="clean">
+		<delete file="${gwt.module}.jar" />
+		<delete file="${gwt.module}.war" />
+		<delete dir="${build}" />
+		<delete dir="${dist}" />
+	</target>
+</project>

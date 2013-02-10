@@ -1,0 +1,20 @@
+#!/bin/sh
+# MAC test invoker 
+#
+# runs relative to the current working directory
+# requires that "bin" be present and classes compiled there
+#
+# see "compile-javac" for an example of the compile step
+
+TEST_CLASS=com.manning.gwtip.benchmark.client.ArrayListAndVectorBenchmark
+
+APPDIR=`dirname $0`;
+CLASSPATH=$CLASSPATH:$APPDIR/src
+CLASSPATH=$CLASSPATH:$APPDIR/bin
+CLASSPATH=$CLASSPATH:/opt/junit-4.1/junit-4.1.jar
+CLASSPATH=$CLASSPATH:$GWT_HOME/gwt-user.jar
+CLASSPATH=$CLASSPATH:$GWT_HOME/gwt-dev-mac.jar
+
+echo "CLASSPATH = $CLASSPATH"
+
+java -Xms128m -Xmx512m -XstartOnFirstThread -cp $CLASSPATH junit.textui.TestRunner $TEST_CLASS

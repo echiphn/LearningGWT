@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gwt_benchmark_report date="Dec 21, 2007 1:20:52 PM" gwt_version="unknown">
+	<category description="" name="">
+		<benchmark class="com.manning.gwtip.benchmark.client.ArrayListAndVectorBenchmark" description="Performs &lt;code&gt;size&lt;/code&gt; removes at position, &lt;code&gt;where&lt;/code&gt;, on a
+Vector of size, &lt;code&gt;size&lt;/code&gt;.
+" name="testVectorRemoves">
+			<source_code>
+    /**
+     * Performs &lt;code&gt;size&lt;/code&gt; removes at position, &lt;code&gt;where&lt;/code&gt;, on a
+     * Vector of size, &lt;code&gt;size&lt;/code&gt;.
+     * @gwt.benchmark.param where = Position.positions2
+     * @gwt.benchmark.param size -limit = insertRemoveRange
+     */
+    public void testVectorRemoves( Position where, Integer size ) {
+      removeFromCollection( size, where, vector );
+    }
+			</source_code>
+			<result agent="Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en) AppleWebKit/420+ (KHTML, like Gecko) Safari 419.3" host="0:0:0:0:0:0:0:1%0">
+				<trial timing="-0.1678466796875">
+					<variable name="where" value=" at the beginning"/>
+					<variable name="size" value="64"/>
+				</trial>
+				<trial timing="-0.201416015625">
+					<variable name="where" value=" at the beginning"/>
+					<variable name="size" value="128"/>
+				</trial>
+				<trial timing="-0.091796875">
+					<variable name="where" value=" at the beginning"/>
+					<variable name="size" value="256"/>
+				</trial>
+				<trial timing="-0.06640625">
+					<variable name="where" value=" at the beginning"/>
+					<variable name="size" value="512"/>
+				</trial>
+				<trial timing="0.53125">
+					<variable name="where" value=" at the beginning"/>
+					<variable name="size" value="1024"/>
+				</trial>
+				<trial timing="3.6875">
+					<variable name="where" value=" at the beginning"/>
+					<variable name="size" value="2048"/>
+				</trial>
+				<trial timing="-0.1495361328125">
+					<variable name="where" value=" at the end"/>
+					<variable name="size" value="64"/>
+				</trial>
+				<trial timing="-0.159423828125">
+					<variable name="where" value=" at the end"/>
+					<variable name="size" value="128"/>
+				</trial>
+				<trial timing="-0.138671875">
+					<variable name="where" value=" at the end"/>
+					<variable name="size" value="256"/>
+				</trial>
+				<trial timing="-0.08984375">
+					<variable name="where" value=" at the end"/>
+					<variable name="size" value="512"/>
+				</trial>
+				<trial timing="-0.044921875">
+					<variable name="where" value=" at the end"/>
+					<variable name="size" value="1024"/>
+				</trial>
+				<trial timing="-0.03125">
+					<variable name="where" value=" at the end"/>
+					<variable name="size" value="2048"/>
+				</trial>
+				<trial timing="-0.1591796875">
+					<variable name="where" value=" in varied locations"/>
+					<variable name="size" value="64"/>
+				</trial>
+				<trial timing="-0.12451171875">
+					<variable name="where" value=" in varied locations"/>
+					<variable name="size" value="128"/>
+				</trial>
+				<trial timing="-0.1015625">
+					<variable name="where" value=" in varied locations"/>
+					<variable name="size" value="256"/>
+				</trial>
+				<trial timing="0.0703125">
+					<variable name="where" value=" in varied locations"/>
+					<variable name="size" value="512"/>
+				</trial>
+				<trial timing="-0.0078125">
+					<variable name="where" value=" in varied locations"/>
+					<variable name="size" value="1024"/>
+				</trial>
+				<trial timing="2.0859375">
+					<variable name="where" value=" in varied locations"/>
+					<variable name="size" value="2048"/>
+				</trial>
+			</result>
+		</benchmark>
+		<benchmark class="com.manning.gwtip.benchmark.client.ArrayListAndVectorBenchmark" description="Performs &lt;code&gt;size&lt;/code&gt; removes at position, &lt;code&gt;where&lt;/code&gt;, on an
+ArrayList of size, &lt;code&gt;size&lt;/code&gt;.
+" name="testArrayListRemoves">
+			<source_code>
+    /**
+     * Performs &lt;code&gt;size&lt;/code&gt; removes at position, &lt;code&gt;where&lt;/code&gt;, on an
+     * ArrayList of size, &lt;code&gt;size&lt;/code&gt;.
+     * @gwt.benchmark.param where = Position.positions2
+     * @gwt.benchmark.param size -limit = insertRemoveRange
+     */
+    public void testArrayListRemoves(Position where, Integer size) {
+      removeFromCollection(size, where, list);
+    }
+			</source_code>
+			<result agent="Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en) AppleWebKit/420+ (KHTML, like Gecko) Safari 419.3" host="0:0:0:0:0:0:0:1%0">
+				<trial timing="-0.1138916015625">
+					<variable name="where" value=" at the beginning"/>
+					<variable name="size" value="64"/>
+				</trial>
+				<trial timing="-0.076904296875">
+					<variable name="where" value=" at the beginning"/>
+					<variable name="size" value="128"/>
+				</trial>
+				<trial timing="-0.037109375">
+					<variable name="where" value=" at the beginning"/>
+					<variable name="size" value="256"/>
+				</trial>
+				<trial timing="0.126953125">
+					<variable name="where" value=" at the beginning"/>
+					<variable name="size" value="512"/>
+				</trial>
+				<trial timing="0.69140625">
+					<variable name="where" value=" at the beginning"/>
+					<variable name="size" value="1024"/>
+				</trial>
+				<trial timing="3.46875">
+					<variable name="where" value=" at the beginning"/>
+					<variable name="size" value="2048"/>
+				</trial>
+				<trial timing="-0.1002197265625">
+					<variable name="where" value=" at the end"/>
+					<variable name="size" value="64"/>
+				</trial>
+				<trial timing="-0.1097412109375">
+					<variable name="where" value=" at the end"/>
+					<variable name="size" value="128"/>
+				</trial>
+				<trial timing="-0.1033935546875">
+					<variable name="where" value=" at the end"/>
+					<variable name="size" value="256"/>
+				</trial>
+				<trial timing="-0.09130859375">
+					<variable name="where" value=" at the end"/>
+					<variable name="size" value="512"/>
+				</trial>
+				<trial timing="-0.07470703125">
+					<variable name="where" value=" at the end"/>
+					<variable name="size" value="1024"/>
+				</trial>
+				<trial timing="-0.0361328125">
+					<variable name="where" value=" at the end"/>
+					<variable name="size" value="2048"/>
+				</trial>
+				<trial timing="-0.1041259765625">
+					<variable name="where" value=" in varied locations"/>
+					<variable name="size" value="64"/>
+				</trial>
+				<trial timing="-0.15087890625">
+					<variable name="where" value=" in varied locations"/>
+					<variable name="size" value="128"/>
+				</trial>
+				<trial timing="-0.05224609375">
+					<variable name="where" value=" in varied locations"/>
+					<variable name="size" value="256"/>
+				</trial>
+				<trial timing="0.041015625">
+					<variable name="where" value=" in varied locations"/>
+					<variable name="size" value="512"/>
+				</trial>
+				<trial timing="0.2890625">
+					<variable name="where" value=" in varied locations"/>
+					<variable name="size" value="1024"/>
+				</trial>
+				<trial timing="1.703125">
+					<variable name="where" value=" in varied locations"/>
+					<variable name="size" value="2048"/>
+				</trial>
+			</result>
+		</benchmark>
+		<benchmark class="com.manning.gwtip.benchmark.client.ArrayListAndVectorBenchmark" description="Appends &lt;code&gt;size&lt;/code&gt; items to an empty ArrayList.
+" name="testArrayListAdds">
+			<source_code>
+    /**
+     * Appends &lt;code&gt;size&lt;/code&gt; items to an empty ArrayList.
+     * @gwt.benchmark.param size -limit = baseRange
+     */
+    public void testArrayListAdds( Integer size ) {
+      int num = size.intValue();
+      for (int i = 0; i &lt; num; i++) {
+        list.add(&quot;hello&quot;);
+      }
+    }
+			</source_code>
+			<result agent="Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en) AppleWebKit/420+ (KHTML, like Gecko) Safari 419.3" host="0:0:0:0:0:0:0:1%0">
+				<trial timing="0.0050048828125">
+					<variable name="size" value="512"/>
+				</trial>
+				<trial timing="0.024169921875">
+					<variable name="size" value="1024"/>
+				</trial>
+			</result>
+		</benchmark>
+		<benchmark class="com.manning.gwtip.benchmark.client.ArrayListAndVectorBenchmark" description="Performs &lt;code&gt;size&lt;/code&gt; gets on an ArrayList of size, &lt;code&gt;size&lt;/code&gt;.
+" name="testArrayListGets">
+			<source_code>
+    /**
+     * Performs &lt;code&gt;size&lt;/code&gt; gets on an ArrayList of size, &lt;code&gt;size&lt;/code&gt;.
+     * @gwt.benchmark.param size -limit = baseRange
+     */
+    public void testArrayListGets( Integer size ) {
+      int num = size.intValue();
+      for (int i = 0; i &lt; num; i++) {
+        list.get(i);
+      }
+    }
+			</source_code>
+			<result agent="Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en) AppleWebKit/420+ (KHTML, like Gecko) Safari 419.3" host="0:0:0:0:0:0:0:1%0">
+				<trial timing="-0.031982421875">
+					<variable name="size" value="512"/>
+				</trial>
+				<trial timing="-0.029541015625">
+					<variable name="size" value="1024"/>
+				</trial>
+			</result>
+		</benchmark>
+		<benchmark class="com.manning.gwtip.benchmark.client.ArrayListAndVectorBenchmark" description="Performs &lt;code&gt;size&lt;/code&gt; inserts at position, &lt;code&gt;where&lt;/code&gt;, on an
+empty ArrayList.
+" name="testArrayListInserts">
+			<source_code>
+    /**
+     * Performs &lt;code&gt;size&lt;/code&gt; inserts at position, &lt;code&gt;where&lt;/code&gt;, on an
+     * empty ArrayList.
+     * @gwt.benchmark.param where = Position.positions
+     * @gwt.benchmark.param size -limit = insertRemoveRange
+     */
+    public void testArrayListInserts( Position where, Integer size ) {
+      insertIntoCollection(size, where, list);
+    }
+			</source_code>
+			<result agent="Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en) AppleWebKit/420+ (KHTML, like Gecko) Safari 419.3" host="0:0:0:0:0:0:0:1%0">
+				<trial timing="-0.0296630859375">
+					<variable name="where" value=" at the beginning"/>
+					<variable name="size" value="64"/>
+				</trial>
+				<trial timing="-0.01806640625">
+					<variable name="where" value=" at the beginning"/>
+					<variable name="size" value="128"/>
+				</trial>
+				<trial timing="0.02978515625">
+					<variable name="where" value=" at the beginning"/>
+					<variable name="size" value="256"/>
+				</trial>
+				<trial timing="0.20703125">
+					<variable name="where" value=" at the beginning"/>
+					<variable name="size" value="512"/>
+				</trial>
+				<trial timing="0.903076171875">
+					<variable name="where" value=" at the beginning"/>
+					<variable name="size" value="1024"/>
+				</trial>
+				<trial timing="3.859130859375">
+					<variable name="where" value=" at the beginning"/>
+					<variable name="size" value="2048"/>
+				</trial>
+				<trial timing="-0.051239013671875">
+					<variable name="where" value=" at the end"/>
+					<variable name="size" value="64"/>
+				</trial>
+				<trial timing="-0.06561279296875">
+					<variable name="where" value=" at the end"/>
+					<variable name="size" value="128"/>
+				</trial>
+				<trial timing="-0.04833984375">
+					<variable name="where" value=" at the end"/>
+					<variable name="size" value="256"/>
+				</trial>
+				<trial timing="-0.0263671875">
+					<variable name="where" value=" at the end"/>
+					<variable name="size" value="512"/>
+				</trial>
+				<trial timing="0.021484375">
+					<variable name="where" value=" at the end"/>
+					<variable name="size" value="1024"/>
+				</trial>
+				<trial timing="0.08935546875">
+					<variable name="where" value=" at the end"/>
+					<variable name="size" value="2048"/>
+				</trial>
+				<trial timing="-0.0796051025390625">
+					<variable name="where" value=" no location specified"/>
+					<variable name="size" value="64"/>
+				</trial>
+				<trial timing="-0.072998046875">
+					<variable name="where" value=" no location specified"/>
+					<variable name="size" value="128"/>
+				</trial>
+				<trial timing="-0.08465576171875">
+					<variable name="where" value=" no location specified"/>
+					<variable name="size" value="256"/>
+				</trial>
+				<trial timing="-0.054443359375">
+					<variable name="where" value=" no location specified"/>
+					<variable name="size" value="512"/>
+				</trial>
+				<trial timing="-0.022216796875">
+					<variable name="where" value=" no location specified"/>
+					<variable name="size" value="1024"/>
+				</trial>
+				<trial timing="0.01025390625">
+					<variable name="where" value=" no location specified"/>
+					<variable name="size" value="2048"/>
+				</trial>
+				<trial timing="-0.07659912109375">
+					<variable name="where" value=" in varied locations"/>
+					<variable name="size" value="64"/>
+				</trial>
+				<trial timing="-0.066162109375">
+					<variable name="where" value=" in varied locations"/>
+					<variable name="size" value="128"/>
+				</trial>
+				<trial timing="-0.032958984375">
+					<variable name="where" value=" in varied locations"/>
+					<variable name="size" value="256"/>
+				</trial>
+				<trial timing="0.07958984375">
+					<variable name="where" value=" in varied locations"/>
+					<variable name="size" value="512"/>
+				</trial>
+				<trial timing="0.4453125">
+					<variable name="where" value=" in varied locations"/>
+					<variable name="size" value="1024"/>
+				</trial>
+				<trial timing="1.71728515625">
+					<variable name="where" value=" in varied locations"/>
+					<variable name="size" value="2048"/>
+				</trial>
+			</result>
+		</benchmark>
+		<benchmark class="com.manning.gwtip.benchmark.client.ArrayListAndVectorBenchmark" description="Performs &lt;code&gt;size&lt;/code&gt; gets on a Vector of size, &lt;code&gt;size&lt;/code&gt;.
+" name="testVectorGets">
+			<source_code>
+    /**
+     * Performs &lt;code&gt;size&lt;/code&gt; gets on a Vector of size, &lt;code&gt;size&lt;/code&gt;.
+     * @gwt.benchmark.param size -limit = baseRange
+     */
+    public void testVectorGets( Integer size ) {
+      int num = size.intValue();
+      for (int i = 0; i &lt; num; i++) {
+        vector.get(i);
+      }
+    }
+			</source_code>
+			<result agent="Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en) AppleWebKit/420+ (KHTML, like Gecko) Safari 419.3" host="0:0:0:0:0:0:0:1%0">
+				<trial timing="-0.102294921875">
+					<variable name="size" value="512"/>
+				</trial>
+				<trial timing="-0.173828125">
+					<variable name="size" value="1024"/>
+				</trial>
+			</result>
+		</benchmark>
+		<benchmark class="com.manning.gwtip.benchmark.client.ArrayListAndVectorBenchmark" description="Appends &lt;code&gt;size&lt;/code&gt; items to an empty Vector.
+" name="testVectorAdds">
+			<source_code>
+    /**
+     * Appends &lt;code&gt;size&lt;/code&gt; items to an empty Vector.
+     * @gwt.benchmark.param size -limit = baseRange
+     */
+    public void testVectorAdds( Integer size ) {
+      int num = size.intValue();
+      for (int i = 0; i &lt; num; i++) {
+        vector.add(&quot;hello&quot;);
+      }
+    }
+			</source_code>
+			<result agent="Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en) AppleWebKit/420+ (KHTML, like Gecko) Safari 419.3" host="0:0:0:0:0:0:0:1%0">
+				<trial timing="-0.1015625">
+					<variable name="size" value="512"/>
+				</trial>
+				<trial timing="-0.03076171875">
+					<variable name="size" value="1024"/>
+				</trial>
+			</result>
+		</benchmark>
+		<benchmark class="com.manning.gwtip.benchmark.client.ArrayListAndVectorBenchmark" description="Performs &lt;code&gt;size&lt;/code&gt; inserts at position, &lt;code&gt;where&lt;/code&gt;, on an
+empty Vector.
+" name="testVectorInserts">
+			<source_code>
+    /**
+     * Performs &lt;code&gt;size&lt;/code&gt; inserts at position, &lt;code&gt;where&lt;/code&gt;, on an
+     * empty Vector.
+     * @gwt.benchmark.param where = Position.positions
+     * @gwt.benchmark.param size -limit = insertRemoveRange
+     */
+    public void testVectorInserts(Position where, Integer size) {
+      insertIntoCollection( size, where, vector );
+    }
+			</source_code>
+			<result agent="Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en) AppleWebKit/420+ (KHTML, like Gecko) Safari 419.3" host="0:0:0:0:0:0:0:1%0">
+				<trial timing="-0.12127685546875">
+					<variable name="where" value=" at the beginning"/>
+					<variable name="size" value="64"/>
+				</trial>
+				<trial timing="-0.1630859375">
+					<variable name="where" value=" at the beginning"/>
+					<variable name="size" value="128"/>
+				</trial>
+				<trial timing="-0.07763671875">
+					<variable name="where" value=" at the beginning"/>
+					<variable name="size" value="256"/>
+				</trial>
+				<trial timing="0.16455078125">
+					<variable name="where" value=" at the beginning"/>
+					<variable name="size" value="512"/>
+				</trial>
+				<trial timing="0.86962890625">
+					<variable name="where" value=" at the beginning"/>
+					<variable name="size" value="1024"/>
+				</trial>
+				<trial timing="3.4072265625">
+					<variable name="where" value=" at the beginning"/>
+					<variable name="size" value="2048"/>
+				</trial>
+				<trial timing="-0.12847900390625">
+					<variable name="where" value=" at the end"/>
+					<variable name="size" value="64"/>
+				</trial>
+				<trial timing="-0.203857421875">
+					<variable name="where" value=" at the end"/>
+					<variable name="size" value="128"/>
+				</trial>
+				<trial timing="-0.114990234375">
+					<variable name="where" value=" at the end"/>
+					<variable name="size" value="256"/>
+				</trial>
+				<trial timing="-0.068359375">
+					<variable name="where" value=" at the end"/>
+					<variable name="size" value="512"/>
+				</trial>
+				<trial timing="0.0234375">
+					<variable name="where" value=" at the end"/>
+					<variable name="size" value="1024"/>
+				</trial>
+				<trial timing="0.19921875">
+					<variable name="where" value=" at the end"/>
+					<variable name="size" value="2048"/>
+				</trial>
+				<trial timing="-0.15582275390625">
+					<variable name="where" value=" no location specified"/>
+					<variable name="size" value="64"/>
+				</trial>
+				<trial timing="-0.134765625">
+					<variable name="where" value=" no location specified"/>
+					<variable name="size" value="128"/>
+				</trial>
+				<trial timing="-0.1224365234375">
+					<variable name="where" value=" no location specified"/>
+					<variable name="size" value="256"/>
+				</trial>
+				<trial timing="-0.107177734375">
+					<variable name="where" value=" no location specified"/>
+					<variable name="size" value="512"/>
+				</trial>
+				<trial timing="-0.07470703125">
+					<variable name="where" value=" no location specified"/>
+					<variable name="size" value="1024"/>
+				</trial>
+				<trial timing="0.0322265625">
+					<variable name="where" value=" no location specified"/>
+					<variable name="size" value="2048"/>
+				</trial>
+				<trial timing="-0.13494873046875">
+					<variable name="where" value=" in varied locations"/>
+					<variable name="size" value="64"/>
+				</trial>
+				<trial timing="-0.1173095703125">
+					<variable name="where" value=" in varied locations"/>
+					<variable name="size" value="128"/>
+				</trial>
+				<trial timing="-0.07568359375">
+					<variable name="where" value=" in varied locations"/>
+					<variable name="size" value="256"/>
+				</trial>
+				<trial timing="0.0830078125">
+					<variable name="where" value=" in varied locations"/>
+					<variable name="size" value="512"/>
+				</trial>
+				<trial timing="0.4521484375">
+					<variable name="where" value=" in varied locations"/>
+					<variable name="size" value="1024"/>
+				</trial>
+				<trial timing="1.8349609375">
+					<variable name="where" value=" in varied locations"/>
+					<variable name="size" value="2048"/>
+				</trial>
+			</result>
+		</benchmark>
+	</category>
+</gwt_benchmark_report>

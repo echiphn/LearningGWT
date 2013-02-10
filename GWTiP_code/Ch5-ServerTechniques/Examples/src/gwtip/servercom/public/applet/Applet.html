@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+      
+ <!--<object 
+  classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93"
+  codebase="http://java.sun.com/products/plugin/autodl/jinstall-1_5_0-windows-i586.cab#Version=1,5,0,0"
+  id="SOAPClientApplet">
+  <param name="code" value="gwtip.servercom.applet.SOAPApplet" />
+  <param name="MAYSCRIPT" value="true" />
+  <param name="archive" value="activation.jar,FasInfoset.jar,http.jar,jaxb-api.jar,jaxb-impl.jar,jaxws-api.jar,jaxws-rt.jar,jsr173_api.jar,jsr181-api.jar,jsr250-api.jar,resolver.jar,saaj-api.jar,saaj-impl.jar,sjsxp.jar,GWTIP_Chapter5_Applet.jar" />
+    <comment>-->
+      <applet
+        id="SOAPClientApplet"
+        MAYSCRIPT
+        code="gwtip.servercom.applet.SOAPApplet"
+        type="application/x-java-applet;version=1.5.0"
+        pluginspage="http://java.sun.com/j2se/1.5.0/download.html"
+        archive="activation.jar,FasInfoset.jar,http.jar,jaxb-api.jar,jaxb-impl.jar,jaxws-api.jar,jaxws-rt.jar,jsr173_api.jar,jsr181-api.jar,jsr250-api.jar,resolver.jar,saaj-api.jar,saaj-impl.jar,sjsxp.jar,GWTIP_Chapter5_Applet.jar">
+        
+      </applet>
+    <!--</comment>
+  </object>-->
+    <script type="text/javascript">
+        
+        function appletSOAPClientReadyNotify(){
+            alert("gotReady");
+            person = new Object();
+            person.firstName="Robert";
+            person.lastName="Cooper"
+            window.sayHelloPerson = person;
+            alert( "returned "+document.getElementById("SOAPClientApplet").sayHello());
+        }
+    </script>
+</html>

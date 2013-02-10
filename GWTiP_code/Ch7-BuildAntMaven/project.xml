@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+	<pomVersion>3</pomVersion>
+	<groupId>com.manning.gwtip</groupId>
+	<artifactId>simpleapp</artifactId>
+	<id>com.manning.gwtip.antmaven</id>
+	<currentVersion>1.0.0</currentVersion>
+	<name>GWT ANT/Maven Example</name>
+	<package>com.manning.gwtip.antmaven</package>
+	<inceptionYear>2006</inceptionYear>
+	<build>
+		<sourceDirectory>src/main/java</sourceDirectory>
+		<resources>
+			<resource>
+				<directory>${basedir}/src/main/resources</directory>
+			</resource>
+		</resources>
+		<unitTestSourceDirectory>src/test/java</unitTestSourceDirectory>
+		<unitTest>
+			<includes>
+				<include>**/*GwtTest.java</include>
+			</includes>
+			<resources>
+				<resource>
+					<directory>${basedir}/src/main/webapp</directory>
+				</resource>
+				<resource>
+					<directory>${basedir}/src/main/java</directory>
+				</resource>
+				<resource>
+					<directory>${basedir}/src/test/java</directory>
+				</resource>
+			</resources>
+		</unitTest>
+	</build>		
+	<dependencies>
+		<!--  stuff that IS war bundled -->
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-servlet</artifactId>
+			<version>1.4.60</version>
+			<properties>
+				<war.bundle>true</war.bundle>
+			</properties>
+		</dependency>
+		<!--  stuff that is NOT war bundled -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-user</artifactId>
+			<version>1.4.60</version>
+		</dependency>		
+
+		<!--  plugins included as type plugin so they are auto downloaded -->
+		<dependency>
+			<groupId>com.totsp.gwt</groupId>
+			<artifactId>maven-googlewebtoolkit-plugin</artifactId>
+			<version>1.5.6</version>
+			<type>plugin</type>
+		</dependency>
+	</dependencies>
+</project>
+

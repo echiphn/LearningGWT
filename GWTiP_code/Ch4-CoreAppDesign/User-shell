@@ -1,0 +1,20 @@
+#!/bin/sh
+# MAC shell invoker
+
+ENTRY_POINT=com.manning.gwtip.user.User
+HOST_PAGE=index.html
+
+APPDIR=`dirname $0`;
+CLASSPATH=$APPDIR/src
+CLASSPATH=$CLASSPATH:$APPDIR/bin
+
+# need to be before gwt-user because of GWTx issue
+for file in $(ls $APPDIR/lib/*.jar )
+ do
+   CLASSPATH=$CLASSPATH:$file
+ done
+
+CLASSPATH=$CLASSPATH:$GWT_HOME/gwt-user.jar
+CLASSPATH=$CLASSPATH:$GWT_HOME/gwt-dev-mac.jar
+
+java -XstartOnFirstThread -cp $CLASSPATH com.google.gwt.dev.GWTShell -out "$APPDIR/www" -logLevel DEBUG "$@" $ENTRY_POINT/$HOST_PAGE

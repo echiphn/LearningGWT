@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:j="jelly:core">
+
+  <preGoal name="war:war">
+    <attainGoal name="gwt:compile" />
+    <attainGoal name="gwt:mergewebxml" />
+  </preGoal>
+  
+  <preGoal name="test">
+  	<!-- do something before test goal -->
+  </preGoal>
+  
+	
+  <postGoal name="jar">
+  	<!-- do something after jar goal -->
+  </postGoal>
+	  
+</project>

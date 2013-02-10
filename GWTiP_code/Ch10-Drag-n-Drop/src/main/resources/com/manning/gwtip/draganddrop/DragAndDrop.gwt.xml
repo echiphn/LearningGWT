@@ -1,0 +1,5 @@
+<module>
+	<inherits name='com.google.gwt.user.User'/>
+    <stylesheet src="style.css" />
+	<entry-point class='com.manning.gwtip.draganddrop.client.MyEntryPoint'/>
+</module>

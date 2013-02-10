@@ -1,0 +1,16 @@
+<module>
+    <script src="prototype.lite.js"><![CDATA[
+        // Confirm that prototype is loaded
+        if( $wnd.Class ){
+            return true;
+        } else {
+            return false;
+        }]]></script>
+    <script src="moo.fx.js"><![CDATA[
+        // Confirm that prototype is loaded
+        if( $wnd.fx ){
+            return true;
+        } else {
+            return false;
+        }]]></script>
+</module>
