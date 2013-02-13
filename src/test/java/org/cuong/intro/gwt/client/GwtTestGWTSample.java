@@ -1,6 +1,7 @@
 package org.cuong.intro.gwt.client;
 
 import org.cuong.intro.gwt.shared.FieldVerifier;
+import org.cuong.testcategories.IntegrationTest;
 import org.junit.experimental.categories.Category;
 
 import com.google.gwt.core.client.GWT;

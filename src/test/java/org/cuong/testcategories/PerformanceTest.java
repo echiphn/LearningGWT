@@ -1,4 +1,4 @@
-package org.cuong.intro.gwt.client;
+package org.cuong.testcategories;
 
 public interface PerformanceTest extends SlowTest {
 
